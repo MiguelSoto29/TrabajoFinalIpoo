@@ -34,8 +34,8 @@ class bdViajeFeliz{
     }
 
     /**
-     * Inicia la coneccion con el Servidor y la  Base Datos Mysql.
-     * Retorna true si la coneccion con el servidor se pudo establecer y false en caso contrario
+     * Inicia la conexion con el Servidor y la  Base Datos Mysql.
+     * Retorna true si la conexion con el servidor se pudo establecer y false en caso contrario
      *
      * @return boolean
      */

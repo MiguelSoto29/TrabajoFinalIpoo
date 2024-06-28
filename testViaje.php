@@ -91,9 +91,9 @@ do {
                 $i=0;
                 foreach ($coleccionEmpresas as $empresa) {
                     if($i % 2 == 0){
-                        echo "\033[36mEmpresa numero $i\n" . $empresa . "-------------------\n" . "y sus vuelos son:" . $empresa->mostrarViajes() . "\033[0m";
+                        echo "\033[36mEmpresa numero $i\n" . $empresa . "-------------------\n" . "y sus vuelos son: \n" . $empresa->mostrarViajes() . "\033[0m";
                     } else {
-                        echo "\033[35mEmpresa numero $i\n" . $empresa . "-------------------\n" . "y sus vuelos son:" . $empresa->mostrarViajes() . "\033[0m";
+                        echo "\033[35mEmpresa numero $i\n" . $empresa . "-------------------\n" . "y sus vuelos son: \n" . $empresa->mostrarViajes() . "\033[0m";
                     }
                    $i++;
                 }
@@ -107,7 +107,6 @@ do {
                     $objResponsable->cargar($datosResponsable);
                     $objResponsable->cargar($datosResponsable);
                     $objResponsable->insertar();
-
                     
                     $datosViaje = ['idViaje' => null,'destino' => 'Buenos Aires','cantidadMaximaPasajeros' => 100,'objEmpresa' => $objEmpresa, 'objEmpleado' => $objResponsable,'coleccionPasajeros' => []];
                     $objViaje->cargar($datosViaje);
@@ -115,15 +114,15 @@ do {
                     
                     $coleccionPasajeros = [
                         ['nombre' => 'Miguel', 'apellido' => 'Soto', 'documento' => '1', 'ptelefono' => '1538', 'idViaje' => $objViaje->getIdViaje()],
-                        ['nombre' => 'Minato', 'apellido' => 'Namikaze', 'documento' => '2', 'ptelefono' => '1597', 'idViaje' => $objViaje->getIdViaje()],
-                        ['nombre' => 'Miles', 'apellido' => 'Morales', 'documento' => '3', 'ptelefono' => '1344', 'idViaje' => $objViaje->getIdViaje()],
-                        ['nombre' => 'Gwen', 'apellido' => 'Stacy', 'documento' => '4', 'ptelefono' => '1529', 'idViaje' => $objViaje->getIdViaje()],
-                        ['nombre' => 'Miguel', 'apellido' => 'Ohara', 'documento' => '5', 'ptelefono' => '1568', 'idViaje' => $objViaje->getIdViaje()],
-                        ['nombre' => 'Peter', 'apellido' => 'Parker', 'documento' => '6', 'ptelefono' => '1599', 'idViaje' => $objViaje->getIdViaje()],
-                        ['nombre' => 'Steve', 'apellido' => 'Rogers', 'documento' => '7', 'ptelefono' => '1523', 'idViaje' => $objViaje->getIdViaje()],
+                        ['nombre' => 'Minato', 'apellido' => 'Namikaze', 'documento' => '2', 'ptelefono' => '1539', 'idViaje' => $objViaje->getIdViaje()],
+                        ['nombre' => 'Miles', 'apellido' => 'Morales', 'documento' => '3', 'ptelefono' => '1540', 'idViaje' => $objViaje->getIdViaje()],
+                        ['nombre' => 'Gwen', 'apellido' => 'Stacy', 'documento' => '4', 'ptelefono' => '1541', 'idViaje' => $objViaje->getIdViaje()],
+                        ['nombre' => 'Miguel', 'apellido' => 'Ohara', 'documento' => '5', 'ptelefono' => '1542', 'idViaje' => $objViaje->getIdViaje()],
+                        ['nombre' => 'Peter', 'apellido' => 'Parker', 'documento' => '6', 'ptelefono' => '1543', 'idViaje' => $objViaje->getIdViaje()],
+                        ['nombre' => 'Steve', 'apellido' => 'Rogers', 'documento' => '7', 'ptelefono' => '1544', 'idViaje' => $objViaje->getIdViaje()],
                         ['nombre' => 'Tony', 'apellido' => 'Stark', 'documento' => '8', 'ptelefono' => '1545', 'idViaje' => $objViaje->getIdViaje()],
-                        ['nombre' => 'Satoru', 'apellido' => 'Gojo', 'documento' => '9', 'ptelefono' => '1576', 'idViaje' => $objViaje->getIdViaje()],
-                        ['nombre' => 'Levi', 'apellido' => 'Ackerman', 'documento' => '10', 'ptelefono' => '1234', 'idViaje' => $objViaje->getIdViaje()],
+                        ['nombre' => 'Satoru', 'apellido' => 'Gojo', 'documento' => '9', 'ptelefono' => '1546', 'idViaje' => $objViaje->getIdViaje()],
+                        ['nombre' => 'Levi', 'apellido' => 'Ackerman', 'documento' => '10', 'ptelefono' => '1547', 'idViaje' => $objViaje->getIdViaje()],
                         ['nombre' => 'Rengoku', 'apellido' => 'Kyojuro', 'documento' => '11', 'ptelefono' => '1565', 'idViaje' => $objViaje->getIdViaje()],
                         ['nombre' => 'Tanjiro', 'apellido' => 'Kamado', 'documento' => '12', 'ptelefono' => '1566', 'idViaje' => $objViaje->getIdViaje()],
                         ['nombre' => 'Eren', 'apellido' => 'Jeager', 'documento' => '13', 'ptelefono' => '1567', 'idViaje' => $objViaje->getIdViaje()],
